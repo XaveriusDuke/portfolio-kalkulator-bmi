@@ -4,18 +4,16 @@ function reset_data() {
     document.getElementById('input-usia').value = '';
     document.getElementById('result-bmi').innerText = '0.00';
     document.querySelector('.nilai-hasil').innerText = '';
-    document.querySelector('input[name="kelamin"]:checked').checked = false; // Menghapus pilihan jenis kelamin
 }
 
 function calculate() {
     // Mendapatkan nilai dari input
-    let genderElement = document.querySelector('input[name="kelamin"]:checked'); // Ambil elemen radio yang dipilih
     let weight = parseFloat(document.getElementById('input-berat-badan').value);
     let height = parseFloat(document.getElementById('input-tinggi-badan').value) / 100; // Mengonversi cm ke meter
     let age = parseFloat(document.getElementById('input-usia').value);
 
     // Memeriksa apakah semua input telah diisi
-    if (!genderElement || isNaN(weight) || isNaN(height) || isNaN(age)) {
+    if (isNaN(weight) || isNaN(height) || isNaN(age)) {
         alert("Mohon isi semua bagian form yang tersedia");
         return; // Menghentikan eksekusi jika ada input yang tidak valid
     }
@@ -28,12 +26,11 @@ function calculate() {
     // Menghitung BMI
     const bmi = weight / (height * height);
     document.getElementById('result-bmi').innerText = bmi.toFixed(2);
-    displayBMI(bmi, genderElement, weight, height, age);
+    displayBMI(bmi, weight, height, age);
 }
 
 function displayBMI(bmi, genderElement, weight, height, age) {
     let category, nilai, explanation;
-    let gender = genderElement.value; // Ambil nilai dari input radio
 
     // Kategori BMI
     if (bmi < 18.5) {
@@ -58,7 +55,6 @@ function displayBMI(bmi, genderElement, weight, height, age) {
     document.querySelector(".identitas-diri").innerText = `Identitas Diri :`;
     document.querySelector(".keterangan-hasil").innerText = `Anda Memiliki ${category}`;
     document.querySelector(".informasi-hasil").innerText = `${explanation}`;
-    document.querySelector(".jenis-kelamin").innerText = `● Jenis Kelamin : ${gender}`;
     document.querySelector(".berat-badan").innerText   = `● Berat Badan   : ${weight} kg`;
     document.querySelector(".tinggi-badan").innerText  = `● Tinggi Badan  : ${height} m`;
     document.querySelector(".usia").innerText          = `● Usia          : ${age} tahun`;
