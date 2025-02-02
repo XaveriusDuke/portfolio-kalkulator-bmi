@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Header Secton Start -->
+    <header class="main-header">
+      <h1>Kalkulator BMI</h1>
+    </header>
+    <!-- Header Seciton End -->
+
+    <!-- Main Content Start -->
+    <main class="konten-utama">
+      <!-- Right Section Start -->
+      <section class="left-content">
+        <article>
+          <p class="informasi-awal">
+            Berat badan ideal merupakan impian semua orang. Tidak hanya bentuk
+            tubuh saja yang menunjang penampilan, berat badan yang ideal juga
+            mengindikasikan kondisi tubuh seseorang yang sehat. BMI (<i
+              >Body Mass Index</i
+            >) atau yang dalam bahasa Indonesia berarti Indeks Massa Tubuh
+            merupakan ukuran yang dapat digunakan untuk menentukan kategori
+            berat badan seseorang dengan indikator berupa berat badan (dalam
+            kilogram) dan tinggi badan (dalam meter). BMI dapat digunakan untuk
+            mengidentifikasi kategori berat badan, seperti kurus, ideal,
+            kelebihan berat badan, atau obesitas. BMI juga dapat digunakan
+            sebagai alat <i>screening</i> untuk melihat risiko kesehatan
+            tertentu.
+          </p>
+        </article>
+
+        <!-- Formt Start -->
+        <form>
+          <div class="form-group">
+            <label for="input-berat-badan">Berat Badan (kg)</label>
+            <input
+              type="number"
+              id="input-berat-badan"
+              placeholder="Masukkan Berat Badan Anda (kg)"
+            />
+          </div>
+          <div class="form-group">
+            <label for="input-usia">Usia (tahun)</label>
+            <input
+              type="number"
+              id="input-usia"
+              placeholder="Masukkan Usia Anda (tahun)"
+            />
+          </div>
+          <div class="form-group">
+            <label for="input-tinggi-badan">Tinggi Badan (cm)</label>
+            <input
+              type="number"
+              id="input-tinggi-badan"
+              placeholder="Masukkan Tinggi Badan Anda (cm)"
+            />
+          </div>
+          <div>
+            <button class="bg-cadet-blue" id="tombol" type="button" onclick="calculate()">Hitung BMI</button>
+            <button class="bg-black" id="reset" type="button" onclick="reset_data()">Reset</button>
+        </div>
+        </form>
+        <!-- Form End -->
+
+        <!-- Feature Information Start -->
+        <article>
+          <h2>Feature Information</h2>
+          <div class="nomor1">
+            1. Menghitung indeks massa tubuh
+        </div>
+          <div class="nomor2">
+            2. Menentukan kategori berat badan ideal atau tidak
+          </div>
+          <p class="informasi-fitur">
+            Kalkulator BMI ini hanya dapat digunakan oleh orang dewasa (wanita
+            hamil atau menyusui tidak boleh mengandalkan hasil pembacaan BMI
+            ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya
+            selain berkonsultasi dengan orang yang memenuhi syarat seperti
+            dokter.
+          </p>
+          <p class="informasi-fitur">
+            Kalkulator BMI ini akan memberi Anda gambaran tentang perbandingan
+            berat badan Anda dengan nilai umum. <i>Body Mass Index</i> (BMI)
+            dihitung dengan membagi berat badan Anda dengan kuadrat tinggi badan
+            Anda (dalam meter) atau dapat dituliskan rumus BMI sebagai berikut :
+          </p>
+          <p class="rumus-bmi">BMI = kg/m<sup>2</sup></p>
+        </article>
+        <!-- Feature Information End -->
+      </section>
+      <!-- Right Section End -->
+
+      <!-- Right Content Start -->
+      <section class="right-content">
+        <section class="result-section">
+          <header>
+            <h2>Hasil</h2>
+          </header>
+          <div class="bmi-container">
+            <span id="result-bmi"> 0.00 </span>
+          </div>
+          <p class="keterangan-hasil">
+            Hasil Perhitungan BMI Anda Akan Ditampilkan Di Sini
+          </p>
+        </section>
+        <p class="nilai-hasil"></p>
+        <h2 class="identitas-diri"></h2>
+        <p class="berat-badan"></p>
+        <p class="tinggi-badan"></p>
+        <p class="usia"></p>
+        <p class="informasi-hasil"></p>
+        <p class="informasi-tambahan"></p>
+      </section>
+      <!-- Right Content End -->
+    </main>
+    <!-- Main Content End -->
+
+    <!-- Footer Start -->
+    <footer>
+      <p>
+        Created by Xaverius Duke Felix Lamar Haro @2025. Connect with me on
+        <a href="https://www.linkedin.com/in/xaverius-duke-felix-lamar-haro-89aba4337/" target="_blank">LinkedIn</a>
+      </p>
+    </footer>
+    <!-- Footer End -->
+
+    <script type="text/javascript" src="/Js/script.js"></script>
+  </body>
+</html>

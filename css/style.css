@@ -1,0 +1,327 @@
+body {
+    background-color: black;
+  }
+  
+  :root {
+    --primary-color: #00f4ff;
+    --secondary-color: #0044ff;
+    --third-color: #00d1ab;
+    --text-color: antiquewhite;
+    --text-color-secondary: #ffdd6d;
+    --background-color: #f4f4f4;
+  }
+  
+  .main-header h1 {
+    color: var(--text-color-secondary);
+  }
+  
+  /* Class Styles */
+  .bg-black {
+    background-color: black;
+    color: var(--text-color);
+  }
+  
+  .bg-black:hover {
+    color: white;
+    font-weight: bold;
+    font-size: 12.75px;
+  }
+  
+  .bg-cadet-blue {
+    background-color: var(--primary-color);
+    color: azure;
+  }
+  
+  .bg-cadet-blue:hover {
+    color: white;
+    font-weight: 700;
+    font-size: 12.5px;
+  }
+  
+  .bmi-container {
+    position: relative; /* Mengatur posisi relatif untuk menempatkan elemen anak secara absolut */
+    display: inline-block; /* Mengatur elemen menjadi inline-block agar bisa memiliki ukuran */
+    margin: 20px;
+    transition: transform 0.2s;
+  }
+  
+  .bmi-container:hover {
+    transform: scale(1.10);
+  }
+  
+  .bmi-container::before {
+    content: '';
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    width: 100px;
+    height: 100px; 
+    background-color: cadetblue;
+    border-radius: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 0;
+  }
+  
+  .checkmark {
+    height: 25px; 
+    width: 25px; 
+    background-color: #eee;
+    border-radius: 50%;
+    position: absolute;
+    left: 0; 
+    top: 50%; 
+    transform: translateY(-50%); /* Menyesuaikan untuk pemusatan vertikal */
+    z-index: 1; /* Menempatkan checkmark di atas */
+  }
+  
+  .container {
+    display: flex;
+    align-items: center; 
+    position: relative;
+    padding-left: 35px; 
+  }
+  
+  .form-group {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 16px;
+  }
+  
+  .informasi-awal, .informasi-fitur, .informasi-hasil, .informasi-tambahan{
+    text-align: justify;
+  }
+  
+  #hasil {
+    position: relative;
+  }
+  
+  .identitas-diri {
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .jenis-kelamin, .berat-badan, .tinggi-badan, .usia {
+    font-weight: bold;
+  }
+  
+  .keterangan-hasil {
+    font-size: 20px;
+    font-family: math;
+    font-weight: bold;
+    text-decoration: wavy;
+    padding: 16px;
+  }
+  
+  .konten-utama {
+    display: flex;
+  }
+  
+  .left-content, .right-content {
+    flex: 2; /* Membagi ruang secara merata */
+    padding: 10px;
+    box-sizing: border-box; /* Agar padding tidak mempengaruhi lebar */
+  }
+  
+  .main-header {
+    width: 93%;
+    margin: auto;
+    text-align: center;
+    background: linear-gradient(to bottom right, var(--primary-color), var(--third-color), var(--secondary-color));
+    border-radius: 10px;
+    padding: 20px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .main-header:hover {
+    background: linear-gradient(to bottom right, var(--secondary-color), var(--third-color), var(--primary-color));
+    transform: scale(1.01);
+  }
+  
+  .nilai-hasil {
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    font-size: 18px;
+  }
+  
+  .result {
+    text-align: center;
+  }
+  
+  #result-bmi {
+    position:relative;
+    color: var(--text-color-secondary);
+    z-index: 1; /* Menempatkan angka di atas lingkaran */
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: black;
+    font-family: math;
+  }
+  
+  .result-section {
+    padding: 16px;
+    text-align: center;
+    background: linear-gradient(to bottom right, var(--primary-color), var(--third-color), var(--secondary-color));
+    border-radius: 10px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .rumus-bmi {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--text-color-secondary);
+    background: linear-gradient(to bottom right, var(--primary-color), var(--third-color), var(--secondary-color));
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+  }
+  
+  .rumus-bmi:hover {
+    transform: scale(1.05);
+  }
+  
+  /* General Styles */
+  a {
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color:mediumblue;
+  }
+  
+  button {
+    border-radius: 5px;
+    border: none;
+    padding: 10px 15px; 
+    color: var(--text-color-secondary) !important;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    color: white !important;
+    background-color: #5f9ea0; 
+    transform: scale(1.05);
+  }
+  
+  form {
+    background: linear-gradient(to bottom right, var(--primary-color), var(--third-color), var(--secondary-color));
+    padding: 32px;
+    border-radius: 10px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  }
+  
+  footer {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
+    background: linear-gradient(to bottom right, var(--primary-color), var(--third-color), var(--secondary-color));
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  input[type=number] {
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #8c8c8c;
+  }
+  
+  input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+  }
+  
+  input[type="radio"]:checked + .checkmark {
+    background-color: cadetblue;
+  }
+  
+  input[type="radio"]:checked + .checkmark::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px; 
+    height: 10px; 
+    background-color: white; 
+    border-radius: 50%;
+    transform: translate(-50%, -50%); /* Memusatkan checkmark */
+  }
+  
+  main {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    display: flex;
+    gap: 60px;
+    padding: 32px;
+  }
+  
+  .right-content  h2 {
+    color: var(--text-color-secondary);
+  }
+  
+  .keterangan-hasil {
+    color: var(--text-color-secondary);
+  }
+  
+  /* Ubah warna label menjadi kuning */
+  .form-group label {
+    color: var(--text-color-secondary);
+  }
+  
+  /* Ubah warna placeholder menjadi kuning */
+  .form-group input::placeholder {
+    color: var(--text-color-secondary);
+    opacity: 1; /* Pastikan warna terlihat dengan jelas */
+  }
+  
+  /* Opsional: Jika ingin warna placeholder tetap jelas di browser Safari */
+  .form-group input:-webkit-input-placeholder {
+    color: var(--text-color-secondary);
+  }
+  
+  .form-group input:-moz-placeholder {
+    color: var(--text-color-secondary);
+  }
+  
+  .form-group input:-ms-input-placeholder {
+    color: var(--text-color-secondary);
+  }
+  
+  p {
+    color: var(--text-color-secondary);
+  }
+  
+  h2 {
+    color: var(--text-color-secondary);
+  }
+  
+  h1 {
+    color: var(--text-color-secondary);
+  }
+  
+  .nomor1 {
+    color: var(--text-color-secondary);
+  }
+  
+  .nomor2 {
+    color: var(--text-color-secondary);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 600px) {
+    main {
+        flex-direction: column;
+        gap: 20px;
+    }
+  }
+  
