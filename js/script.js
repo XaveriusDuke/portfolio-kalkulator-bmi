@@ -29,7 +29,7 @@ function calculate() {
     displayBMI(bmi, weight, height, age);
 }
 
-function displayBMI(bmi, genderElement, weight, height, age) {
+function displayBMI(bmi, weight, height, age) {
     let category, nilai, explanation;
 
     // Kategori BMI
