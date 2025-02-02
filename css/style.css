@@ -128,7 +128,7 @@ body {
     width: 93%;
     margin: auto;
     text-align: center;
-    background: linear-gradient(to bottom right, var(--primary-color), var(--third-color), var(--secondary-color));
+    background: var(--primary-color);
     border-radius: 10px;
     padding: 20px; 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
